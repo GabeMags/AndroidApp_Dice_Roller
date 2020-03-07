@@ -1,6 +1,7 @@
 package com.example.android.diceroller
 
-import android.content.SharedPreferences.Editor
+import android.app.Activity
+import android.content.Context
 import android.os.Bundle
 import android.view.View
 import android.widget.*
@@ -9,11 +10,22 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
+    private var mContext: Context? = null
+    private var mActivity: Activity? = null
+
+    private var mRelativeLayout: RelativeLayout? = null
+    private val mButton: Button? = null
+
+    private val mPopupWindow: PopupWindow? = null
+
+
+
     var selectedDie = String()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 
         val rollButton: Button = findViewById(R.id.roll_button)
         rollButton.setOnClickListener { rollDice() }
