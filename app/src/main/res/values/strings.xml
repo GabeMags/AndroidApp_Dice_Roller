@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">DiceRoller</string>
+    <string name="roll_label">Roll</string>
+    <string name="die_faces_label">Number of faces</string>
+    <string name="select_dice_label">Dice type</string>
+    <string name="selected_dice">Dice type:</string>
+    <string name="tap_roll">Tap roll!</string>
+    <string name="one_die_label">Single</string>
+    <string name="algebraic_die_label">Algebraic</string>
+    <string name="splash_screen_label">An App by Gabriel Magallanes</string>
+
+    <string-array name="diceTypes_array">
+        <item>d4</item>
+        <item>d6</item>
+        <item>d8</item>
+        <item>d10</item>
+        <item>d12</item>
+        <item>d20</item>
+        <item>d100</item>
+    </string-array>
+
+</resources>
