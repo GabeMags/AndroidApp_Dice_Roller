@@ -14,11 +14,10 @@ class SplashScreen : AppCompatActivity() {
 
         the_vacuum.setImageResource(R.drawable.the_vacuum)
 
-        val timeout = 2000
-        val homeIntent = Intent(this@SplashScreen, MainActivity::class.java)
+        val timeout = 2500
+        val splash = Intent(this@SplashScreen, MainActivity::class.java)
         Handler().postDelayed({
-            //TODO:Do some stuff here
-            startActivity(homeIntent)
+            startActivity(splash)
             finish()
         }, timeout.toLong())
     }

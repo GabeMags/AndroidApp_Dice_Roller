@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dieTypeLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF">
+
+    <RadioGroup
+        android:id="@+id/dieType_radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RadioButton
+            android:id="@+id/d4RadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="d4"
+            android:textAlignment="viewStart"
+            android:textSize="25sp" />
+
+        <RadioButton
+            android:id="@+id/d6RadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="d6"
+            android:textAlignment="viewStart"
+            android:textColor="#000000"
+            android:textSize="25sp" />
+
+        <RadioButton
+            android:id="@+id/d8RadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="d8"
+            android:textAlignment="viewStart"
+            android:textColor="#000000"
+            android:textSize="25sp" />
+
+        <RadioButton
+            android:id="@+id/d10RadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="d10"
+            android:textAlignment="viewStart"
+            android:textColor="#000000"
+            android:textSize="25sp" />
+
+        <RadioButton
+            android:id="@+id/d12RadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="d12"
+            android:textAlignment="viewStart"
+            android:textColor="#000000"
+            android:textSize="25sp" />
+
+        <RadioButton
+            android:id="@+id/d20RadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="d20"
+            android:textAlignment="viewStart"
+            android:textColor="#000000"
+            android:textSize="25sp" />
+
+        <RadioButton
+            android:id="@+id/d100RadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="d100"
+            android:textAlignment="viewStart"
+            android:textColor="#000000"
+            android:textSize="25sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/dieFacesApply_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/apply_label"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dieType_radioGroup"
+        app:layout_constraintVertical_bias="0.50" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
