@@ -12,6 +12,7 @@ import android.view.View
 import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.edit
 import com.example.android.diceroller.R.layout.die_faces_menu
 import com.example.android.diceroller.R.layout.roll_mode_menu
 import kotlinx.android.synthetic.main.activity_main.*
@@ -32,9 +33,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //initialize a shared pref object
+        val settings = getSharedPreferences("DiceRollerSettings", Context.MODE_PRIVATE)
+
         //listener: ROLL BUTTON
         val rollButton: Button = findViewById(R.id.roll_button)
         rollButton.setOnClickListener { rollDice() }
+
+        //TODO: create a way to listen for the result of the radio groups in the pop up menus
 
         //function: CHANGE DIE TYPE BUTTON
         changeDiceButton.setOnClickListener{
@@ -60,14 +66,19 @@ class MainActivity : AppCompatActivity() {
                 popupWindow.exitTransition = slideOut
             }
 
-            //apply the preferences once apply is tapped
+            //apply the dieFaces preference once apply button is tapped
             val applyButton = dieFaces.findViewById<Button>(R.id.dieFacesApply_Button)
             applyButton.setOnClickListener{
-                // Dismiss the popup window
+
+                //store the die type in the settings shared preferences file for the app
+
+
+
+                //dismiss the popup window
                 popupWindow.dismiss()
             }
 
-            // show a toast to confirm the window closed
+            //show a toast to confirm the window closed
             popupWindow.setOnDismissListener {
                 Toast.makeText(applicationContext,"Popup closed",Toast.LENGTH_SHORT).show()
             }
@@ -109,6 +120,9 @@ class MainActivity : AppCompatActivity() {
             //apply the preferences once apply is tapped
             val applyButton = rollMode.findViewById<Button>(R.id.rollModeApply_Button)
             applyButton.setOnClickListener{
+
+
+
                 // Dismiss the popup window
                 popupWindow.dismiss()
             }
@@ -127,6 +141,10 @@ class MainActivity : AppCompatActivity() {
                 0 // Y offset
             )
         }
+
+
+
+
 
         //access & store the list of dice from the string resources
         val diceList = resources.getStringArray(R.array.diceTypes_array)
@@ -154,6 +172,8 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+
+
     }
 
     private fun rollDice(){
