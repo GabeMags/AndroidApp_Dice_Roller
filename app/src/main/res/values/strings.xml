@@ -9,6 +9,8 @@
     <string name="splash_screen_label">An app by Gabriel Magallanes</string>
     <string name="change_roll_mode_label">Change roll mode</string>
     <string name="apply_label">Apply</string>
+    <string name="roll_mode_menu_header">Select roll mode</string>
+    <string name="die_faces_menu_header">Select number of faces</string>
 
 
 

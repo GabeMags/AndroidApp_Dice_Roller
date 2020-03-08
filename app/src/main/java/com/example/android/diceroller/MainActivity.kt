@@ -43,8 +43,8 @@ class MainActivity : AppCompatActivity() {
             val dieFaces = inflater.inflate(die_faces_menu,null)
             val popupWindow = PopupWindow(
                 dieFaces, // die type view to show in popup window
-                LinearLayout.LayoutParams.WRAP_CONTENT, // Width of popup window
-                LinearLayout.LayoutParams.WRAP_CONTENT // Window height
+                LinearLayout.LayoutParams.MATCH_PARENT, // Width of popup window
+                LinearLayout.LayoutParams.MATCH_PARENT // Window height
             )
 
             // how much shadow underneath the popup window
@@ -89,8 +89,8 @@ class MainActivity : AppCompatActivity() {
             val rollMode = inflater.inflate(roll_mode_menu,null)
             val popupWindow = PopupWindow(
                 rollMode, // die type view to show in popup window
-                LinearLayout.LayoutParams.WRAP_CONTENT, // Width of popup window
-                LinearLayout.LayoutParams.WRAP_CONTENT // Window height
+                LinearLayout.LayoutParams.MATCH_PARENT, // Width of popup window
+                LinearLayout.LayoutParams.MATCH_PARENT // Window height
             )
 
             // how much shadow underneath the popup window
